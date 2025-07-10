@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .password-toggle {
+      display: flex;
+      align-items: center;
+    }
+
+    .password-toggle input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .reset-btn {
+      background-color: #6c757d;
+    }
+
+    .reset-btn:hover {
+      background-color: #5a6268;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    .success {
+      color: green;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      .container {
+        padding: 15px;
+      }
+
+      input, button {
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Signup Form</h2>
+    <form id="myForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <div class="password-toggle">
+        <input type="checkbox" id="togglePassword">
+        <label for="togglePassword">Show Password</label>
+      </div>
+
+      <div id="error" class="error"></div>
+      <div id="success" class="success"></div>
+
+      <button type="submit">Submit</button>
+      <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const errorDiv = document.getElementById("error");
+    const successDiv = document.getElementById("success");
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop form initially
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = passwordField.value.trim();
+
+      if (!name || !email || !password) {
+        errorDiv.textContent = "Please fill in all fields.";
+        successDiv.textContent = "";
+      } else {
+        errorDiv.textContent = "";
+        successDiv.textContent = "Form submitted successfully!";
+        // Optionally reset after delay
+        setTimeout(() => {
+          form.reset();
+          successDiv.textContent = "";
+        }, 2000);
+      }
+    });
+
+    togglePassword.addEventListener("change", function() {
+      passwordField.type = this.checked ? "text" : "password";
+    });
+
+    function resetForm() {
+      form.reset();
+      errorDiv.textContent = "";
+      successDiv.textContent = "";
+    }
+  </script>
+
+</body>
+</html>

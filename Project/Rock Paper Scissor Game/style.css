@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 30px;
+}
+.container
+{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) ;
+}
+.button
+{
+    margin: 20px;
+    
+}
+.choice
+{
+    background-color: #4CAF50;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    margin: 0 10px;
+    color: white;
+
+}
+.choice:hover{
+    background-color: #45a049;
+}
+.result p, .result h2{
+    margin: 10px 0;
+}

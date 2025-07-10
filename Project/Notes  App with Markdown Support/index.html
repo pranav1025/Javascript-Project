@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Markdown Notes App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <h1>📝 Markdown Notes</h1>
+    <div class="note-controls">
+      <button id="new-note">New Note</button>
+    </div>
+    <div id="notes-list"></div>
+  </div>
+
+  <template id="note-template">
+    <div class="note">
+      <textarea class="markdown-input" placeholder="Write Markdown here..."></textarea>
+      <div class="preview"></div>
+      <div class="note-buttons">
+        <button class="save-note">💾 Save</button>
+        <button class="delete-note">🗑️ Delete</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

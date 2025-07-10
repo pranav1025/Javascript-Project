@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Jane Doe</h1>
+      <button id="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" aria-label="Introduction">
+    <h2>Hi, I'm Jane Doe</h2>
+    <p>Frontend developer & designer crafting beautiful and functional web experiences.</p>
+    <a href="#projects" class="btn-primary" role="button">View My Work</a>
+  </section>
+
+  <section id="about" aria-label="About me">
+    <h2 class="section-title">About Me</h2>
+    <p>I'm a passionate frontend developer with over 5 years of experience in building responsive, accessible, and user-friendly websites and applications. I enjoy turning ideas into pixel-perfect products using clean, efficient code and modern design principles.</p>
+  </section>
+
+  <section id="projects" aria-label="My projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card" tabindex="0">
+        <img src="https://via.placeholder.com/400x160.png?text=Project+One" alt="Screenshot of Project One" class="project-image" />
+        <h3 class="project-title">Project One</h3>
+        <p class="project-description">A sleek portfolio website built with React and styled-components. Responsive and SEO optimized.</p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">Live</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+      </article>
+      <article class="project-card" tabindex="0">
+        <img src="https://via.placeholder.com/400x160.png?text=Project+Two" alt="Screenshot of Project Two" class="project-image" />
+        <h3 class="project-title">Project Two</h3>
+        <p class="project-description">An e-commerce web app featuring a clean UI and secure payment integration using Stripe.</p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">Live</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+      </article>
+      <article class="project-card" tabindex="0">
+        <img src="https://via.placeholder.com/400x160.png?text=Project+Three" alt="Screenshot of Project Three" class="project-image" />
+        <h3 class="project-title">Project Three</h3>
+        <p class="project-description">A mobile-first social media feed app with infinite scrolling and offline support.</p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">Live</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" aria-label="Contact me">
+    <h2 class="section-title">Get in Touch</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your email address" />
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+      
+      <button type="submit">Send Message</button>
+      <p id="form-message" aria-live="polite" style="margin-top:0.8rem;color:#e11d48;"></p>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2024 Jane Doe. All rights reserved.
+  </footer>
+<script src="script.js"></script>
+
+</body>
+</html>
+

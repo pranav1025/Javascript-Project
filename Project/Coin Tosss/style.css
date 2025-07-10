@@ -1,0 +1,57 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right,#1e3c72,#2a5298);
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+    margin: 0;
+
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+
+
+}
+.coin{
+    font-size: 4rem;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 30px auto;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left,#fdfbfb #ebedee);
+    box-shadow: 0 0 20px rgba(255,255,255,0.8) 0 0 40px rgba(255,255,255,0.2) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: transform 1s ease, box-shadow 0.5s ease;
+
+}
+.flip{
+    transform: rotateY(1800deg);
+    box-shadow: 0 0 40px rgba(255,255,255,0.6) 0 0 60px rgba(255,255,255,0.3) inset;
+}
+button{
+    padding: 12px 25px;
+    margin: 20px;
+    border-radius: 20px;
+    border: none;
+    background: #f39c12;
+    color: white;
+    box-shadow:  0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    
+}
+button:hover{
+    background: #e67e22;
+    transform: scale(1.05);
+}
+#result{
+    font-size: 20px;
+    margin-top: 20px;
+}

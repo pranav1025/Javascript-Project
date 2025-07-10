@@ -1,0 +1,21 @@
+body{
+     font-family: Arial,  sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    padding-top: 100px;
+
+}
+.container
+{
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0, 4px ,8px rgba(0,0,0,0.1);
+}
+#day
+{
+    font-size: 2em;
+    color: #007acc;
+    margin-top: 20px;
+}
